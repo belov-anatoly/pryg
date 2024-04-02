@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         test1();
@@ -27,6 +29,24 @@ public class Main {
     //TODO:
     //1 сделать функцию, которая спрашивает у пользователя координаты и длину языка и выдает в
     //  качестве результата новую Лягушку
+    public static Frog descr()
+    {
+
+        Scanner scanner = new Scanner(System.in);
+        int tongueLength;
+        System.out.println("Вычисляем параметры новой лягушки: ");
+        System.out.println("введите координаты лягушки: ");
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        System.out.println("введите длину языка лягушки: ");
+        tongueLength = scanner.nextInt();
+        Frog frog = new Frog(x,y, tongueLength);
+        return frog;
+
+    }
+
+
+
     //2 сделать функцию, которая спрашивает у пользователя длину маршрута, затем запраивает
     //  много точек в виде пар координат
     //  результат этой функции - массив Точек
@@ -64,3 +84,4 @@ class Frog{
         System.out.println("вызван конструктор Frog с 3 параметрами");
     }
 }
+
